@@ -1,18 +1,20 @@
-int j = 0;
+int led =13;
+int j=0;
 void setup() {
-  pinMode(13, OUTPUT);
+  // put your setup code here, to run once:
+pinMode(led, OUTPUT);
 }
 
 void loop() {
+  // put your main code here, to run repeatedly:
 do {
-    digitalWrite(13,HIGH); //Turn red LED on
-    delay(500);             //Leave on for redOnTime
-    digitalWrite(13,LOW);  //Turn red LED off
-    delay(500);
-     j = j + 1;
-    // 500ms delay
-  } while (j < 4);
-  delay(3000);
-  j=0;
+  digitalWrite(led,HIGH);
+  delay(500);
+  digitalWrite(led,LOW);
+  delay(500);
+  j=j+1;
+  }
+while(j<4);
+delay(4000);
+
 }
-  
